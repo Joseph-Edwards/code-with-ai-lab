@@ -20,7 +20,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-#### Windows
+#### Windows (cmd)
 
 ```bash
 python -m venv .venv
@@ -35,7 +35,8 @@ Check your installation by running `pytest`
 1. Open `starter.py` in VS Code.
 2. Use Copilot (or another AI tool) to suggest a function
    `greet(name: str) -> str` that returns `"Hello, <name>!"`.
-3. Review the suggestion, accept or edit, then run `pytest` to execute tests.
+3. Review the suggestion, accept or edit.
+4. Run tests again and ensure they pass. If they fail, inspect errors and fix.
 
 ## Files
 
