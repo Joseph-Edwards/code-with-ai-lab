@@ -1,17 +1,16 @@
-# string_utils.py — intentionally verbose / duplicated
-def shout(s):
+def _clean_text(s):
     if s is None:
         return ""
-    s2 = s.strip()
-    if len(s2) == 0:
-        return ""
-    return s2.upper() + "!"
+
+    text = s.strip()
+    return text if text else ""
+
+
+def shout(s):
+    text = _clean_text(s)
+    return "" if not text else text.upper() + "!"
 
 
 def whisper(s):
-    if s is None:
-        return ""
-    s2 = s.strip()
-    if len(s2) == 0:
-        return ""
-    return s2.lower() + "..."
+    text = _clean_text(s)
+    return "" if not text else text.lower() + "..."
